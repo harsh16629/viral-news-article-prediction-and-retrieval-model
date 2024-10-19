@@ -1,3 +1,4 @@
+# Viral News Article Prediction Model
 
 ## Project Overview
 The project aims to predict the virality of news article titles using a binary classification model based on BERT (Bidirectional Encoder Representations from Transformers). Given two article titles, the model determines which is more likely to go viral. This task is performed by training a BERT-based model using pairs of article titles with a corresponding binary label indicating which is more viral. The project uses Hugging Face's transformers library for model training and evaluation, leveraging pre-trained BERT models for sequence classification.
