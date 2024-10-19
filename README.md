@@ -24,7 +24,7 @@ BERT Encoder: Pretrained on large corpora of text and fine-tuned in this project
 Classification Head: A linear layer on top of the BERT model outputs that maps the contextualized token representations to two output logits (one for each class).
 
 ## Model Training and Evaluation
-### Training Arguments
+### 1. Training Arguments
 The training is controlled by specific arguments defined using the TrainingArguments class. These arguments include:
 
 Output Directory: Where the model checkpoints and results will be saved.
@@ -34,18 +34,17 @@ Epochs: The model is trained for 10 epochs.
 Learning Rate: A learning rate of 1e-5 for fine-tuning the BERT model.
 Weight Decay: Regularization factor to avoid overfitting, set to 0.01.
 
-### Trainer Setup
+### 2. Trainer Setup
 The Hugging Face Trainer is used to simplify training, evaluation, and logging. It handles all aspects of the training process, including forward passes, backpropagation, and evaluation.
 
-### Evaluation Metrics
+### 3. Evaluation Metrics
 The primary metric used for evaluation is accuracy. The compute_metrics function calculates the accuracy based on the predictions:
-
 Logits (raw model outputs) are converted to probabilities using the softmax function.
 The predicted class is selected based on the maximum probability.
 Accuracy is computed by comparing the predicted class with the true labels.
 
-### Model Training
+### 4. Model Training
 The Trainer starts the training process using the train() method. The model is fine-tuned on the training dataset for 10 epochs.
 
-### Model Evaluation
+### 5. Model Evaluation
 After training, the model is evaluated on the test dataset using the evaluate() method, which outputs the final accuracy.
